@@ -30,15 +30,4 @@ pub fn main() !void {
             break;
         }
     }
-
-    // try stdout.print("user> ", .{});
-    // try stdout.flush();
-    // const line = stdin.takeDelimiterExclusive('\n') catch {
-    //     break;
-    // };
-
-    // const out = libmal.rep(line[0..]);
-
-    // try stdout.print("{s}\n", .{out});
-    // try stdout.flush(); // Don't forget to flush!
 }

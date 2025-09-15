@@ -71,12 +71,13 @@ pub fn build(b: *std.Build) void {
 
     const Step = enum {
         step0_repl,
+        step1_read_print,
     };
 
     const step = b.option(Step, "step", "The step to compile") orelse .step0_repl;
 
     const root_file = switch (step) {
-        .step0_repl => "src/main.zig",
+        .step0_repl, .step1_read_print => "src/main.zig",
     };
 
     const exe = b.addExecutable(.{
